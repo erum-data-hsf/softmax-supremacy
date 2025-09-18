@@ -113,7 +113,7 @@ key_proj(embedded).shape , val_proj(embedded).shape
 
 
 ## Computing Attention
-!["Attention"]("../Grafiken/text1.svg")
+!["Attention"](../Grafiken/text1.svg)
 Implement the Attention-formula from above in a batched manner, such that for a input set of sequences `(N,10)`
 you get an output set of attention-weighted values `(N,1)`
 
@@ -282,6 +282,8 @@ def train():
     return traj
 
 training = train()
+plot(model,5,traj)
+plt.show()
 ```
 
 # Bonus
