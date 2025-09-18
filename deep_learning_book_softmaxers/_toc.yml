@@ -5,4 +5,4 @@ format: jb-book
 root: intro
 chapters:
 - file: intoduction_to_attention.md
-- file: linear_regression.md
+- file: In-Depth_Explanation.md
