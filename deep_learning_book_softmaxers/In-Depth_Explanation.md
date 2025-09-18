@@ -122,7 +122,7 @@ you get an output set of attention-weighted values `(N,1)`
 
 
 --> **Some hints**
-* Keep in mind that the dimension $\sqrt{d}$in the softmax function is your `att_dim`
+* Keep in mind that the dimension $\sqrt{d}$ in the softmax function is your `att_dim`
 * Initiate your query randomly in the size `1,att_dim`
 * query and keys: einsum --> `'ik,bjk->bij'`
 * for the softmax use `dim=-1`
