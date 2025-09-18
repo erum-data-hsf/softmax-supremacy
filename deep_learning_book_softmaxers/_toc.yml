@@ -6,3 +6,4 @@ root: intro
 chapters:
 - file: intoduction_to_attention.md
 - file: In-Depth_Explanation.md
+- file: outlook_and_new_frontiers.md
