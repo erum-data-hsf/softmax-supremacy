@@ -279,11 +279,12 @@ def train():
             print(i,loss)
         opt.step()
         opt.zero_grad()
+    plot(model,5,traj)
+    plt.show()
     return traj
 
 training = train()
-plot(model,5,traj)
-plt.show()
+
 ```
 
 # Bonus
