@@ -6,3 +6,4 @@ root: intro
 chapters:
 - file: intoduction_to_attention.md
 - file: linear_regression.md
+- file: outlook_and_new_frontiers.md
