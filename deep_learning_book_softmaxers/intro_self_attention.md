@@ -29,9 +29,9 @@ Three learned projections per token embedding:
 
 Given matrices \(Q, K, V\):
 
-\[
+$$
 \text{Attention}(Q, K, V) = \operatorname{softmax}\!\left(\frac{QK^{\top}}{\sqrt{d_k}}\right) V
-\]
+$$
 
 - \(QK^\top\) are relevance scores (query-key matches).
 - Divide by \(\sqrt{d_k}\) to keep scores numerically stable as dimensionality grows.
@@ -44,9 +44,8 @@ Given matrices \(Q, K, V\):
 
 One set of Q/K/V might miss different kinds of relations (syntax vs semantics, local vs global). Multi-head attention runs several attention heads in parallel, each with its own \(W_Q, W_K, W_V\), then concatenates and linearly projects:
 
-\[
-\text{MHA}(X) = \operatorname{Concat}(\text{head}_1,\ldots,\text{head}_h)\, W_O
-\]
+$$\text{MHA}(X) = \operatorname{Concat}(\text{head}_1,\ldots,\text{head}_h)\, W_O
+$$
 
 Each head captures a different view of the sequence.
 
@@ -55,9 +54,9 @@ Each head captures a different view of the sequence.
 ## What do we pass to Q, K, and V?
 
 Start from token embeddings \(X \in \mathbb{R}^{T \times d_{\text{model}}}\). Learn parameter matrices \(W_Q, W_K, W_V\), then compute:
-\[
+$$
 Q = XW_Q,\quad K = XW_K,\quad V = XW_V.
-\]
+$$
 
 - **Self-attention**: \(Q, K, V\) all come from the same sequence \(X\).
 - **Cross-attention** (decoder → encoder): \(Q\) comes from the decoder state, \(K, V\) come from encoder outputs.
