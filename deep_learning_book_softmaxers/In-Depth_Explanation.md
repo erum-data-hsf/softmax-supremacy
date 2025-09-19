@@ -287,6 +287,9 @@ training = train()
 
 ```
 
+If you set the embedding to a 3D latent space, you can easily visualize the vectors and see how they gradually adjust through backpropagation. 
+![Animation](../qkv_overview/animation_schnell.gif)
+
 # Bonus
 Maybe you want to change our rule to learn. 
 You can play around how to properly choose the hyperparameters, such like`embed_dim`, `att_dim` and number of training steps in order to learn more complicated rules such like:  
