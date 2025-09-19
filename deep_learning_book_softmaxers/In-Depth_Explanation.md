@@ -279,16 +279,18 @@ def train():
             print(i,loss)
         opt.step()
         opt.zero_grad()
-    plot(model,5,traj)
-    plt.show()
     return traj
 
 training = train()
 
 ```
 
+```{code-cell} ipython3
+plot(model,5,traj)
+plt.show()
+```
 If you set the embedding to a 3D latent space, you can easily visualize the vectors and see how they gradually adjust through backpropagation. 
-![Animation](../qkv_overview/animation_schnell.gif)
+![Animation](../qkv-overview/animation_schnell.gif)
 
 # Bonus
 Maybe you want to change our rule to learn. 
